@@ -8,11 +8,13 @@ compiler.init(options);
 
 app.use(bodyp.json());
 
-app.use("/codemirror/codemirror-5.65.16", express.static("D:/website/compiler/codemirror/codemirror-5.65.16"));
+app.use("/codemirror/codemirror-5.65.16", express.static(path.join(__dirname, "codemirror/codemirror-5.65.16")));
 
+// Adjust the path to serve index.html
 app.get("/", function (req, res) {
-    
-    res.sendFile("D:/website/compiler/index.html");
+    // Use path.join to construct a platform-independent path
+    const indexPath = path.join(__dirname, "index.html");
+    res.sendFile(indexPath);
 });
 
 app.post("/compile", async function (req, res) {
