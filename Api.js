@@ -3,6 +3,7 @@ const app = express();
 const bodyp = require("body-parser");
 const compiler = require("compilex");
 const options = { stats: true };
+const path = require("path");
 compiler.init(options);
 
 
