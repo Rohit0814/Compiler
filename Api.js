@@ -26,9 +26,10 @@ app.post("/compile", async function (req, res) {
 
         if (lang === "c++") {
             if(!input){
-            envData = { OS: "windows", cmd: "g++", options: { timeout: 10000 } };
-
-            // Compile C++ code
+            if (windows)
+                envData = { OS : "windows" , cmd : "g++" , options: { timeout: 10000 } }; // (uses g++ command to compile )
+            else
+                envData = { OS : "linux" , cmd : "gcc" , options: { timeout: 10000 } };
             compiler.compileCPP(envData, code, function (data) {
                 if (data.error) {
                     console.error("Compilation Error:", data.error);
@@ -43,7 +44,10 @@ app.post("/compile", async function (req, res) {
             });
             }
             else{
-                envData = { OS: "windows", cmd: "g++", options: { timeout: 10000 } };
+                if (windows)
+                    envData = { OS : "windows" , cmd : "g++" , options: { timeout: 10000 } }; // (uses g++ command to compile )
+                else
+                    envData = { OS : "linux" , cmd : "gcc" , options: { timeout: 10000 } };
                 compiler.compileCPPWithInput(envData , code , input , function (data) {
                     if (data.error) {
                         console.error("Compilation Error:", data.error);
@@ -59,7 +63,10 @@ app.post("/compile", async function (req, res) {
             }
         } else if (lang === "java") {
             if(!input){
-            envData = { OS: "windows", options: { timeout: 10000 } };
+                if(windows)
+                    envData = { OS: "windows", options: { timeout: 10000 } };
+                else
+                    envData = { OS: "linux", options: { timeout: 10000 } };
 
             compiler.compileJava(envData, code, function (data) {
                 if (data.error) {
@@ -75,7 +82,10 @@ app.post("/compile", async function (req, res) {
             });
             }
             else{
-                envData = { OS: "windows", options: { timeout: 10000 } };
+                if(windows)
+                    envData = { OS: "windows", options: { timeout: 10000 } };
+                else
+                    envData = { OS: "linux", options: { timeout: 10000 } };
                 compiler.compileJavaWithInput( envData , code , input ,  function(data){
                     if (data.error) {
                         console.error("Compilation Error:", data.error);
@@ -91,7 +101,10 @@ app.post("/compile", async function (req, res) {
             }
         } else if (lang === "python") {
             if(!input){
-            envData = { OS: "windows", options: { timeout: 10000 } };
+                if(windows)
+                    envData = { OS: "windows", options: { timeout: 10000 } };
+                else
+                    envData = { OS: "windows", options: { timeout: 10000 } };
 
             // Compile Python code
             compiler.compilePython(envData, code, function (data) {
@@ -109,7 +122,10 @@ app.post("/compile", async function (req, res) {
             });
             }
             else{
-                envData = { OS: "windows", options: { timeout: 10000 } };
+                if(windows)
+                    envData = { OS: "windows", options: { timeout: 10000 } };
+                else
+                    envData = { OS: "windows", options: { timeout: 10000 } };
                 compiler.compilePythonWithInput( envData , code , input ,  function(data){
                     if (data.error) {
                         console.error("Compilation Error:", data.error);
