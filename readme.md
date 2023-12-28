@@ -1,11 +1,12 @@
-# Script to generate README.md file for Devil's Compiler
+# README.md file for Devil's Compiler
 
-readme_content = """\
 # Devil's Compiler
 
-![Devil's Compiler Logo](path/to/logo.png)
+![Devil's Compiler Logo](https://lh3.googleusercontent.com/-SZALuAk5MVs/ZY2tarypUsI/AAAAAAAACT4/_KXMPTUXxHkED-NFLJuRe24ImGFTR39ygCNcBGAsYHQ/h120/dashboard.png)
 
 Devil's Compiler is a powerful online Integrated Development Environment (IDE) designed to streamline your coding experience. With support for multiple programming languages, it caters to a wide range of developers, from beginners to seasoned professionals.
+
+- **URL of Devil's compiler**: https://compiler.devilscoding.tech/
 
 ## Key Features
 
