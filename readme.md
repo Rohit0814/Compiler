@@ -18,8 +18,6 @@ Devil's Compiler is a powerful online Integrated Development Environment (IDE) d
 
 - **Built-in Debugger**: Debug your code efficiently with the built-in debugger, helping you identify and fix issues quickly.
 
-- **Version Control Integration**: Easily integrate your projects with popular version control systems like Git, making it simple to manage and track changes.
-
 - **Responsive Interface**: Devil's Compiler boasts a clean and responsive user interface, ensuring a smooth coding experience on any device.
 
 ## Supported Languages
@@ -33,10 +31,11 @@ Devil's Compiler is a powerful online Integrated Development Environment (IDE) d
 
 ## Getting Started
 
-1. Visit [Devil's Compiler](https://devils-compiler.com) in your web browser.
-2. Sign up for an account or log in if you already have one.
-3. Create a new project or import an existing one.
-4. Select your desired programming language and start coding!
+1. Visit [Devil's Compiler](https://compiler.devilscoding.tech/) in your web browser.
+2. No Need to Sign up for an account or log in.
+3. No need to Create any type of project or import an existing one.
+4. No need to save file diretly start doing practices
+5. Select your desired programming language and start coding!
 
 ## Installation
 
@@ -52,5 +51,5 @@ This project is licensed under the [MIT License](LICENSE.md) - see the [LICENSE.
 
 ## Contact
 
-Have questions or suggestions? Feel free to [contact us](mailto:info@devils-compiler.com).
+Have questions or suggestions? Feel free to [contact us](dc@devilscoding.tech).
 """
